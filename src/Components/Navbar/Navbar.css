@@ -1,0 +1,5 @@
+.active {
+  color: transparent !important;
+  background-image: linear-gradient(to right, indigo, purple);
+  background-clip: text;
+}
