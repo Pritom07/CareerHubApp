@@ -1,0 +1,9 @@
+.dreamcolor {
+  color: transparent;
+  background-image: linear-gradient(to right, #3f51b5, #9c27b0);
+  background-clip: text;
+}
+
+.btnclass {
+  background-image: linear-gradient(to right, #3f51b5, #9c27b0);
+}
