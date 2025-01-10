@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <header>
+    <header className="w-7xl mx-auto bg-[#7E90FE1A] pr-1">
       <nav>
         <div className="navbar">
           <div className="navbar-start">

@@ -26,7 +26,7 @@ const Featuredjobs = () => {
       .then((data) => Setjobsdata(data));
   }, []);
   return (
-    <div className="mt-12">
+    <div className="mt-11 w-7xl mx-auto px-1">
       <h1 className="text-center text-5xl font-extrabold">Featured Jobs</h1>
       <p className="text-[#757575] font-semibold text-[18px] text-center mt-3">
         Explore thousands of job opportunities with all the information you

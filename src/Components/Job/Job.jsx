@@ -1,10 +1,13 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { HiOutlineCurrencyDollar } from "react-icons/hi";
 import { FaArrowRightLong } from "react-icons/fa6";
+import PropTypes from "prop-types";
 import "./Job.css";
+import { useNavigate } from "react-router-dom";
 
 const Job = ({ job }) => {
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -13,8 +16,15 @@ const Job = ({ job }) => {
     location,
     salary,
   } = job;
+
+  const navigate = useNavigate();
+
+  const DetailsHandling = () => {
+    navigate(`job/${id}`);
+  };
+
   return (
-    <div className="mt-9 px-2">
+    <div className="mt-10 px-2">
       <div className="card card-compact bg-base-100 shadow-xl">
         <figure>
           <img src={logo} />
@@ -51,7 +61,10 @@ const Job = ({ job }) => {
             </div>
           </div>
           <div className="card-actions mt-2">
-            <button className="text-[20px] font-extrabold text-white btn bg-gradient-to-r from-indigo-500 to-purple-500 hover:scale-x-110">
+            <button
+              className="text-[20px] font-extrabold text-white btn bg-gradient-to-r from-indigo-500 to-purple-500 hover:scale-x-110"
+              onClick={DetailsHandling}
+            >
               View Details <FaArrowRightLong className="inline" />
             </button>
           </div>
@@ -59,6 +72,10 @@ const Job = ({ job }) => {
       </div>
     </div>
   );
+};
+
+Job.propTypes = {
+  job: PropTypes.object.isRequired,
 };
 
 export default Job;
