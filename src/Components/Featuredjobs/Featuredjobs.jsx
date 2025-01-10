@@ -37,7 +37,7 @@ const Featuredjobs = () => {
           <Job key={job.id} job={job}></Job>
         ))}
       </div>
-      <div className="mt-4 flex items-center justify-center">
+      <div className="mt-6 flex items-center justify-center">
         <button
           onClick={handlevisible}
           type="btn"

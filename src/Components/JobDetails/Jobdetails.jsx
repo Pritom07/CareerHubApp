@@ -4,6 +4,7 @@ import { SlCalender } from "react-icons/sl";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 import { CiLocationOn } from "react-icons/ci";
+import { FaArrowLeftLong } from "react-icons/fa6";
 import "./Jobdetails.css";
 
 const Jobdetails = () => {
@@ -66,6 +67,7 @@ const Jobdetails = () => {
             className="bg-gradient-to-r from-indigo-500 to-purple-500 md:text-[20px] font-extrabold text-white w-full rounded-lg py-2 mt-4"
             onClick={goback}
           >
+            <FaArrowLeftLong className="inline mr-3" />
             Go Back
           </button>
         </div>
