@@ -1,10 +1,11 @@
+import Featuredjobs from "../Featuredjobs/Featuredjobs";
 import Jobcategory from "../Jobcategory/Jobcategory";
 import "./Home.css";
 
 const Home = () => {
   return (
-    <div>
-      <div className="w-7xl mx-auto ml-4">
+    <div className="px-2">
+      <div className="w-7xl mx-auto md:ml-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div>
             <h1 className="text-5xl text-nowrap text-justify md:text-7xl font-extrabold">
@@ -26,6 +27,7 @@ const Home = () => {
         </div>
       </div>
       <Jobcategory></Jobcategory>
+      <Featuredjobs></Featuredjobs>
     </div>
   );
 };
