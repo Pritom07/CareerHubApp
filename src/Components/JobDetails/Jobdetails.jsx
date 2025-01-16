@@ -13,6 +13,7 @@ const Jobdetails = () => {
   const intjobId = parseInt(jobId);
   const desiredjob = data.find((job) => job.id === intjobId);
   const {
+    id,
     job_description,
     job_responsibility,
     educational_requirements,
@@ -25,6 +26,11 @@ const Jobdetails = () => {
   const goback = () => {
     navigate(-1);
   };
+
+  const handleapply = () => {
+    navigate(`/appliedjobs/${id}`);
+  };
+
   return (
     <div className="w-7xl mx-auto">
       <div className="bg-[#7E90FE1A] w-screen padding">
@@ -118,6 +124,7 @@ const Jobdetails = () => {
           </div>
           <button
             type="button"
+            onClick={handleapply}
             className="bg-gradient-to-r from-indigo-500 to-purple-500 md:text-[20px] font-extrabold text-white w-full rounded-lg py-2 mt-4"
           >
             Apply Now
