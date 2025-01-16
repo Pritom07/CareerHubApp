@@ -19,4 +19,10 @@ const setdata = (id) => {
   }
   setDatatoStorage(fromstorage);
 };
-export { getitem, setdata };
+
+const removeFromstorage = (id) => {
+  const fromstorage = getitem();
+  const remaining = fromstorage.filter((idx) => idx !== id);
+  setDatatoStorage(remaining);
+};
+export { getitem, setdata, removeFromstorage };

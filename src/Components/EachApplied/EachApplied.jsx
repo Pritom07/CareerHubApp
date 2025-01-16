@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { CiLocationOn } from "react-icons/ci";
-import { HiOutlineCurrencyDollar } from "react-icons/hi2";
 import PropTypes from "prop-types";
-import { getitem } from "../localstorage";
+import { getitem, removeFromstorage } from "../localstorage";
+import Showapplied from "../Showapplied/Showapplied";
 
 const EachApplied = ({ jobdata }) => {
   const [idarray, setidarray] = useState([]);
@@ -24,13 +23,22 @@ const EachApplied = ({ jobdata }) => {
       setfindjob(searchres);
     }
   }, [idarray, jobdata]);
-  console.log(findjob);
+
+  const removeapply = (id) => {
+    removeFromstorage(id);
+    const arr = getitem();
+    setidarray(arr);
+  };
 
   return (
     <div>
-      {
-        // findjob.map(eachappliedjob=>)
-      }
+      {findjob.map((eachappliedjob) => (
+        <Showapplied
+          key={eachappliedjob.id}
+          eachappliedjob={eachappliedjob}
+          removeapply={removeapply}
+        ></Showapplied>
+      ))}
     </div>
   );
 };
