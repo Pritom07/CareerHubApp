@@ -46,7 +46,7 @@ const Job = ({ job }) => {
               </button>
             </div>
           </div>
-          <div className="text-[#757575] md:text-[17px] font-semibold flex items-center mt-1">
+          <div className="text-[#757575] md:text-[16px] lg:text-[13px] font-semibold flex items-center mt-1 md:pr-5">
             <div>
               <p className="text-nowrap">
                 <IoLocationOutline className="inline mr-1" />

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { getitem, removeFromstorage } from "../localstorage";
 import Showapplied from "../Showapplied/Showapplied";
-import "./Eachapplied.css";
 import { IoIosArrowDown } from "react-icons/io";
 
 const EachApplied = ({ jobdata }) => {
