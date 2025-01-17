@@ -16,7 +16,7 @@ const Showapplied = ({ eachappliedjob, removeapply }) => {
   } = eachappliedjob;
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate(-1);
+    navigate(`/appliedjobs/id/${id}`);
   };
   return (
     <div className="w-full px-4 mb-3">

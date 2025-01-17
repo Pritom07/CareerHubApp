@@ -10,7 +10,7 @@ const Footer = () => {
               There are many variations of passages <br />
               of lorem ipsum, but the majority have
               <br />
-              suffered alternation in some form
+              suffered alternation in some form.
             </span>
             <img src="images/social.png" className="mt-2"></img>
           </p>
