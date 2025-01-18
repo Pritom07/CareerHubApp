@@ -6,6 +6,7 @@ import Root from "./Components/Root/Root";
 import Home from "./Components/Home/Home";
 import Appliedjobs from "./Components/Appliedjobs/Appliedjobs";
 import Jobdetails from "./Components/JobDetails/Jobdetails";
+import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,11 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <ToastContainer
+      autoClose={3000}
+      progressClassName="toastProgress"
+      bodyClassName="toastBody"
+    />
     <RouterProvider router={router} />
   </StrictMode>
 );

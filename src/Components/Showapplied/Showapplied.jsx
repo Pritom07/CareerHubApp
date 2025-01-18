@@ -2,6 +2,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { HiOutlineCurrencyDollar } from "react-icons/hi2";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Showapplied = ({ eachappliedjob, removeapply }) => {
   const {
@@ -17,6 +18,7 @@ const Showapplied = ({ eachappliedjob, removeapply }) => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate(`/appliedjobs/id/${id}`);
+    toast.success(`Jobdetails of ${job_title} of ${company_name}`);
   };
   return (
     <div className="w-full px-4 mb-3">

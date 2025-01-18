@@ -15,3 +15,11 @@ html {
   margin: 0 auto;
   background-color: #f1f5f9;
 }
+
+.toastBody {
+  font-family: "Manrope", serif;
+  font-size: 1rem !important;
+}
+.toastProgress {
+  background: indigo !important;
+}

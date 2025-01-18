@@ -4,6 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import PropTypes from "prop-types";
 import "./Job.css";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Job = ({ job }) => {
   const {
@@ -21,6 +22,7 @@ const Job = ({ job }) => {
 
   const DetailsHandling = () => {
     navigate(`job/${id}`);
+    toast.success(`Details of ${job_title} of ${company_name}`);
   };
 
   return (
