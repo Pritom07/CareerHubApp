@@ -111,8 +111,28 @@ const EachApplied = ({ jobdata }) => {
           </li>
         </ul>
       </details>
-
       <div>
+        {filterjob.length === 0 ? (
+          <div className="flex flex-col items-center">
+            <img src="images/noapplied.png" className="md:w-[20%] md:-mt-7" />
+            <h1 className="text-3xl font-semibold -mt-4 text-rose-500">
+              No Job Applied Yet !!
+            </h1>
+          </div>
+        ) : (
+          <div>
+            {filterjob.map((eachappliedjob) => (
+              <Showapplied
+                key={eachappliedjob.id}
+                eachappliedjob={eachappliedjob}
+                removeapply={removeapply}
+              ></Showapplied>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* <div>
         {filterjob.map((eachappliedjob) => (
           <Showapplied
             key={eachappliedjob.id}
@@ -120,7 +140,7 @@ const EachApplied = ({ jobdata }) => {
             removeapply={removeapply}
           ></Showapplied>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

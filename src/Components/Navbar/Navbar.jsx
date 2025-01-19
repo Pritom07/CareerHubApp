@@ -43,7 +43,7 @@ const Navbar = () => {
                 <li className="text-xl font-bold text-[#757575]">
                   <NavLink
                     to="/appliedjobs"
-                    className={({ isActive }) => (isActive ? "active" : " ")}
+                    className={({ isActive }) => isActive && "active:"}
                   >
                     Applied Jobs
                   </NavLink>

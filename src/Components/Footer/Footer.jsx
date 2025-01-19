@@ -72,7 +72,7 @@ const Footer = () => {
             </a>
           </nav>
         </div>
-        <div className="border-t-2 border-slate-500 max-w-[1260px] mx-auto mt-10 md:mt-7">
+        <div className="border-t-2 border-slate-500 max-w-[1260px] mx-auto mt-10 md:mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-slate-500 pt-3">
             <h1 className="text-[14px] font-medium">
               <CiAt className="inline text-xl font-extrabold mr-1" />
